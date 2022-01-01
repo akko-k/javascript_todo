@@ -14,12 +14,22 @@ const onClickAdd = () => {
   const p = document.createElement("p");
   p.innerText = inputText;
 
+  //完了ボタンを作成
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "完了";
+  completeButton.addEventListener("click", () => alert("完了"));
+
+  //削除ボタンを作成
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "削除";
+  deleteButton.addEventListener("click", () => alert("削除"));
+
   // divタブの中にpタブを入れる
   div.appendChild(p);
-
+  div.appendChild(completeButton);
+  div.appendChild(deleteButton);
   // liタブの中にdivタブを入れる
   li.appendChild(div);
-  console.log(li);
 
   //未完了リストに追加
   document.getElementById("incomplete-list").appendChild(li);

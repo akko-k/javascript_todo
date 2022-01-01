@@ -1,0 +1,2 @@
+name = "shin"
+p name
