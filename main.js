@@ -22,7 +22,10 @@ const onClickAdd = () => {
   //削除ボタンを作成
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "削除";
-  deleteButton.addEventListener("click", () => alert("削除"));
+  deleteButton.addEventListener("click", () => {
+    const deletTarget = deleteButton.parentNode.parentNode;
+    document.getElementById("incomplete-list").removeChild(deletTarget);
+  });
 
   // divタブの中にpタブを入れる
   div.appendChild(p);
